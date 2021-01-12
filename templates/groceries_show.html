@@ -1,0 +1,22 @@
+<!-- templates/groceries_show.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<a href='/'>Return to Groceries List</a>
+<h1>{{ grocery.title }}</h1>
+<h2>{{ grocery.description }}</h2>
+<img width='420' height='315' src='{{ grocery.img }}'>
+
+<!-- Delete button -->
+<p><form method='POST' action='/groceries/{{ grocery._id }}/delete'>
+    <button type='submit'>Delete</button>
+</form></p>
+<!-- Comment form -->
+{% include 'partials/comment_form.html' %}
+<!-- Show Comments -->
+<div>
+{% for comment in comments %}
+    {% include 'partials/comment.html' %}
+{% endfor %}
+</div>
+{% endblock %}

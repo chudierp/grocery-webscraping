@@ -1,0 +1,24 @@
+<!-- templates/partials/comment_form.html -->
+
+<form action='/groceries/comments' method='post'>
+    <input type='hidden' value='{{ grocery._id }}' name='grocery_id'/>
+    <fieldset>
+            <legend>Add any specifications here</legend>
+            
+    
+            <!-- DESCRIPTION -->
+            <div class='form-group'>
+                
+                <textarea class='form-control'
+                    id='comment-content'
+                    name='content'
+                    rows='10'
+                    placeholder='Your comment...'></textarea>
+            </div>
+        </fieldset>
+    
+        <!-- BUTTON -->
+        <div class='form-group'>
+            <button class='btn btn-primary' type='submit'>Save Comment</button>
+        </div>
+    </form>

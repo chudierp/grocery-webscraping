@@ -1,0 +1,15 @@
+<!-- templates/groceries_index.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>List Of Groceries</h1><a href='/groceries/new'>New grocery Items</a> 
+    <div class = "row">
+    {% for grocery in groceries_list %}
+        <div class = 'col-md-3'>
+        <h2>{{ grocery.title }}</h2>
+        <a href="/groceries/{{ grocery._id }}"><img src="{{grocery.img}}" width="200px" height="200px"></a>
+        </div>
+    {% endfor %}
+    </div>
+
+{% endblock %}
