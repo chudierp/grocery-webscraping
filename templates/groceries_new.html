@@ -10,14 +10,20 @@
 <body>
 
 <select name="dropdown">
-  <option value="{'title': 'Vegetables', 'img': '/static/Vegetables.jpg'}" data-image="Vegetables.jpg">Vegetables</option>
+  <!-- <option value="{'title': 'Vegetables', 'img': '/static/Vegetables.jpg'}" data-image="Vegetables.jpg">Vegetables</option>
   <option value="{'title': 'Fruits', 'img': '/static/fruits.jpg'}" data-image="fruits.jpg">Fruits</option>
   <option value="{'title': 'Cereal', 'img': '/static/cereal.jpg'}"data-image="cereal.jpg">Cereal</option>
   <option value="{'title': 'Beverages', 'img': '/static/orange juice.png'}" data-image="orange juice.png">Juice</option>
   <option value="{'title': 'Salt & Pepper', 'img': '/static/Salt & Pepper.jpg'}" data-image="Salt & Pepper.jpg">Salt & Pepper</option>
   <option value="{'title': 'Sugar & Honey', 'img': '/static/sugar.jpg'}" data-image="sugar.jpg">Sugar & Honey</option>
   <option value="{'title': 'Frozen Food', 'img': '/static/frozenfood.jpg'}" data-image="frozen food.jpg">Frozen Food</option>
-  <option value="{'title': 'Snacks', 'img': '/static/Snacks.jpeg'}" data-image="Snacks.jpeg">Snacks</option>
+  <option>Snacks</option> -->
+
+  {% for grocery in groceries_list %}
+        <option>{{ grocery._id }}</option>
+                
+       
+    {% endfor %}
 
 </select> 
 </body>
